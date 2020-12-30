@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+
+
+  <title>抽奖</title>
+
+
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- font awesome style -->
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="/static/css/nice-select.min.css"
+    integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-7 col-md-8 mx-auto">
+            <div class="detail-box">
+              <h1>
+                评论区 <br>
+                抽奖系统
+              </h1>
+              <p>
+                制作者：B站UP主 一团雷丘
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="find_container ">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <form action="http://127.0.0.1:5000">
+                  <div class="form-row ">
+                    <div class="form-group col-lg-3">
+                      <input type="text" name="bv" class="form-control" id="bv" placeholder="视频BV号">
+                    </div>
+                    <div class="form-group col-lg-3">
+                      <input type="text" name="number" class="form-control" id="number" placeholder="抽奖人数">
+                    </div>
+                    <div class="form-group col-lg-3">
+                      <input type="text" name="mid" class="form-control" id="MID" placeholder="UP主MID号">
+                    </div>
+                    <div class="form-group col-lg-3">
+                      <div class="btn-box">
+                        <button type="submit" onclick="lottery();" class="btn ">抽奖</button>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            <ul class="job_check_list">
+              <li class=" ">
+                <input id="check" name="check" type="checkbox">
+                <label for="checkbox">
+                  仅筛选关注
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div style="text-align: center;">
+            {% for each in lucky %}
+            <h1 style="color:white;">
+              {{each}}
+            </h1>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      </form>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+
+  <!-- jQery -->
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="/static/js/bootstrap.js"></script>
+  <!-- nice select -->
+  <script src="/static/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo="
+    crossorigin="anonymous"></script>
+
+  <script>
+  </script>
+
+</body>
+
+</html>
